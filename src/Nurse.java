@@ -1,8 +1,7 @@
 public class Nurse extends MedicalStaff {
-    // Additional field specific to Nurse
     private int patientsAssigned;
 
-    // Constructor - uses super()
+    // Constructor
     public Nurse(int staffId, String name, String department, int experienceYears, int patientsAssigned) {
         super(staffId, name, department, experienceYears);
         this.patientsAssigned = patientsAssigned;

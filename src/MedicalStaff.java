@@ -65,17 +65,17 @@ public class MedicalStaff {
         }
     }
 
-    // Method to be overridden - describes what staff member does
+
     public void work() {
         System.out.println(name + " is working in the hospital.");
     }
 
-    // Another method to be overridden - returns role
+
     public String getRole() {
         return "Medical Staff";
     }
 
-    // Method that won't be overridden - checks experience level
+
     public boolean isExperienced() {
         return experienceYears >= 5;
     }

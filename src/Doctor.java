@@ -1,14 +1,13 @@
 public class Doctor extends MedicalStaff {
-    // Additional field specific to Doctor
     private String specialization;
 
-    // Constructor - uses super() to call parent constructor
+    // Constructor
     public Doctor(int staffId, String name, String department, int experienceYears, String specialization) {
         super(staffId, name, department, experienceYears >= 0 ? experienceYears : 0);
         this.specialization = specialization;
     }
 
-    // Getter and Setter for new field
+    // Getter and Setter
     public String getSpecialization() {
         return specialization;
     }
@@ -34,19 +33,20 @@ public class Doctor extends MedicalStaff {
         return "Doctor";
     }
 
-    // New method specific to Doctor
+
     public void diagnosePatient(String patientName) {
         System.out.println("Dr. " + name + " is diagnosing patient: " + patientName);
     }
 
-    // Another new method
+
+
     public boolean canPerformSurgery() {
         return specialization.equals("Surgeon") ||
                 specialization.equals("Cardiology") ||
                 specialization.equals("Neurology");
     }
 
-    // Another new method
+
     public boolean isSpecialist() {
         return experienceYears >= 10;
     }
